@@ -26,3 +26,14 @@ repos:
       exclude: scrapy_spider/settings.py
       args:
           - '--max-line-length=88'
+- repo: local
+  hooks:
+    - id: pytest
+      name: pytest
+      entry: pytest
+      language: system
+      pass_filenames: false
+      args:
+        - tests/
+        - -v
+        - --tb=short
